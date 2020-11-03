@@ -1,6 +1,6 @@
 const notesService = {
   getAllNotes(knex) {
-    return knex.select('*').from('folders');
+    return knex.select('*').from('notes');
   },
   getById(knex, id) {
     return knex.from('notes').select('*').where('id', id).first();
